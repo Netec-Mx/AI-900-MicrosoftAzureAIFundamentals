@@ -192,3 +192,43 @@ To delete your workspace:
 
 1. In the [Azure portal](https://portal.azure.com), in the **Resource groups** page, open the resource group you specified when creating your Azure Machine Learning workspace.
 2. Click **Delete resource group**, type the resource group name to confirm you want to delete it, and select **Delete**.
+
+
+**se ve bien, pero NO sale el botón Copy.**
+
+👉 **Conclusión:** GitHub Pages **NO tiene botón Copy integrado**, ni aunque uses Markdown.
+
+Pero **sí puedes mostrarlo** agregando un **script muy pequeño**.  
+Te doy el más simple y listo para pegar.
+
+---
+
+# ✅ SOLUCIÓN MÁS FÁCIL PARA TENER COPY EN GITHUB PAGES
+
+### 1️⃣ Agrega este script al final de tu `.md` (sí funciona en Markdown en GitHub Pages)
+Solo pega esto al FINAL de tu archivo `.md`:
+
+```html
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll("pre > code").forEach((block) => {
+    const button = document.createElement("button");
+    button.innerText = "Copy";
+    button.style.float = "right";
+    button.style.margin = "5px";
+    button.style.padding = "3px 6px";
+    button.style.fontSize = "12px";
+    button.style.cursor = "pointer";
+
+    button.addEventListener("click", () => {
+      navigator.clipboard.writeText(block.innerText);
+      button.innerText = "Copied!";
+      setTimeout(() => button.innerText = "Copy", 1200);
+    });
+
+    block.parentNode.style.position = "relative";
+    block.parentNode.insertBefore(button, block);
+  });
+});
+</script>
+
