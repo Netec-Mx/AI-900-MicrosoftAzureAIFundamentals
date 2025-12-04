@@ -1,8 +1,8 @@
----
-title: AI-900 Labs
----
+# Bienvenido a AI-900
 
-# ✨ Bienvenido a la Plataforma AI-900
+¡Gracias por visitar nuestra plataforma!
 
-¡Gracias por visitar nuestra plataforma!  
-Explora todos los laboratorios y comienza tu viaje de aprendizaje hoy mismo.
+## Laboratorios
+- [Explore machine learning scenarios](sims/Instructions/Labs/01-explore-ml.md)
+- [Explore Automated Machine Learning](fundamentals/Instructions/Exercises/01-machine-learning.md)
+
