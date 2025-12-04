@@ -36,4 +36,7 @@ También puedes encontrar más recursos en nuestra página de [**Netec**](https:
 
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> be0b78b (Agregado index.md para GitHub Pages)
